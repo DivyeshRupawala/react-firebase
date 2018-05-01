@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+
+    <!-- Firebase Libs  -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDaD19wpvX0yY5n6vuEhIFejAh8HJOfI8Q",
+        authDomain: "react-api-acfae.firebaseapp.com",
+        databaseURL: "https://react-api-acfae.firebaseio.com",
+        projectId: "react-api-acfae",
+        storageBucket: "react-api-acfae.appspot.com",
+        messagingSenderId: "638277029149"
+      };
+      firebase.initializeApp(config);
+
+      // firebase.initializeApp({
+      // apiKey: '### FIREBASE API KEY ###',
+      //   authDomain: '### FIREBASE AUTH DOMAIN ###',
+      //   projectId: '### CLOUD FIRESTORE PROJECT ID ###'
+      // });
+
+      // Initialize Cloud Firestore through Firebase
+      window.db = firebase.firestore();
+
+      // ADD data to users collection
+        // db.collection("users").add({
+        //     dob : '16-12-1988',
+        //     email: 'divyesh.rupawala@sapient.com',
+        //     firstName: 'Divyesh',
+        //     lastName: 'Rupawala',
+        //     mobileNumber : '9974746674',
+        //     sex : 'Male'
+        // })
+        // .then(function(docRef) {
+        //     console.log("Document written with ID: ", docRef.id);
+        // })
+        // .catch(function(error) {
+        //     console.error("Error adding document: ", error);
+        // });
+
+        // READ data from users collection
+      // window.db.collection("users").get().then((querySnapshot) => {
+      //     querySnapshot.forEach((doc) => {
+      //         console.log(doc.data());
+      //     });
+      // });
+    </script>
+
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
