@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Button, CardBody, CardTitle } from 'reactstrap'
-import { Form, FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import { signUp } from './sign-up-actions'
@@ -9,9 +9,8 @@ import InputWithLabel from '../share/components/InputWithLabel'
 const SignUp = ({signUp, onSignUp=f=>f}) => {
 	let _dob, _email, _firstName, _lastName, _mobileNumber, _sex, _password;
 
-	const clickHandler = () => {
-		console.log(_dob, _email, _firstName, _lastName, _mobileNumber, _sex, _password)
-		//onSignUp(getObj());
+	const clickHandler = () => {		
+		onSignUp(getObj());
 	}
 
 	const ID_FIRT_NAME = "firstName";
@@ -57,12 +56,14 @@ const SignUp = ({signUp, onSignUp=f=>f}) => {
 			case ID_PASSWORD :
 				_password = value		
 				break
+			default :
+				break	
 		}
 	}
 
 	return(
 		<div className='signup'>	
-		  
+		 
 	      <Card>	       
 	        <CardTitle>Sign Up</CardTitle>
 	        <CardBody>
@@ -77,12 +78,12 @@ const SignUp = ({signUp, onSignUp=f=>f}) => {
 		        <FormGroup tag="fieldset">		         
 		          <FormGroup check>
 		            <Label check>
-		              <Input type="radio" name="radio1" /> Male
+		              <Input type="radio" onChange={event => onHanlderChange(event,ID_SEX)} name="radio1" value="Male"/> Male
 		            </Label>
 		          </FormGroup>
 		          <FormGroup check>
 		            <Label check>
-		              <Input type="radio" name="radio1" />Female
+		              <Input type="radio" onChange={event => onHanlderChange(event,ID_SEX)} name="radio1" value="Female"/>Female
 		            </Label>
 		          </FormGroup>
 		          
@@ -105,9 +106,9 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onSignUp({firstName, lastName, email, password, dob, sex}) {
+		onSignUp({firstName, lastName, email, password, dob, sex, mobileNumber}) {
 			dispatch(
-				signUp(firstName, lastName, email, password, dob, sex)
+				signUp(firstName, lastName, email, password, dob, sex, mobileNumber)
 			)
 		}
 	}

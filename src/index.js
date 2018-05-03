@@ -6,29 +6,15 @@ import './index.css';
 
 import RouterHandler from './RouterHandler'
 import registerServiceWorker from './registerServiceWorker';
-
-import { createStore, applyMiddleware} from 'redux'
 import { Provider } from 'react-redux'
-import createSagaMiddleware from 'redux-saga'
-
-import appReducer from './index-reducer'
-import mySaga from './index-sagas'
-
-const initialState = {
-	"signUp" : [] 
-};
-
-// create the saga middleware
-const sagaMiddleware = createSagaMiddleware();
-
-const store = createStore(appReducer, initialState, applyMiddleware(sagaMiddleware));
-
-// then run the saga
-sagaMiddleware.run(mySaga)
+import store from './config-store'
+import { CookiesProvider } from 'react-cookie';
 
 Window.store = store;
 
 ReactDOM.render(<Provider store={store}>
-		<RouterHandler />
-	</Provider>, document.getElementById('root'));
+					<CookiesProvider>
+						<RouterHandler />
+					</CookiesProvider>
+				</Provider>, document.getElementById('root'));
 registerServiceWorker();

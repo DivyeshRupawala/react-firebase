@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap';
+import { FormGroup, Label, Input } from 'reactstrap';
 
 const InputWithLabel = ({label,id, type, onChangeValue}) => 
 	(

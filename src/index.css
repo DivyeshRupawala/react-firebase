@@ -60,6 +60,7 @@ body {
   position: absolute;
   right: 10px;
   top: 40px;
+  z-index: 9;
 }
 
 .login {
