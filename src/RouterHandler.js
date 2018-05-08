@@ -32,6 +32,7 @@ const RouterHandler = ({isUserLoggedIn, cookies}) => {
 					{isLoggedIn ? 
 						<Switch>
 					      <Route exact path='/' component={Home}/>
+								<Route path='/home' component={Home} />
 					      <Redirect from="/logIn" exact to="/" />
 					    </Switch>					    
 					    :
