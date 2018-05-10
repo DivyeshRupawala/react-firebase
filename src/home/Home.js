@@ -115,7 +115,7 @@ class Home extends Component {
         <div style={divStyle}>
           <Row>
             <Col sm="3">
-              <Card body>
+              <CardWithTitle>
                 <Carousel
                   activeIndex={activeIndex}
                   next={this.next}
@@ -138,7 +138,7 @@ class Home extends Component {
                     onClickHandler={this.next}
                   />
                 </Carousel>
-              </Card>
+              </CardWithTitle>
             </Col>
             <Col sm="9">
               <CardWithTitle

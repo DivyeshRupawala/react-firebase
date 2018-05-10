@@ -13,11 +13,11 @@ import {
   Col
 } from "reactstrap";
 
-const CardWithTitle = ({ title, text }) => (
+const CardWithTitle = ({ title, text, children }) => (
   <Card body>
-    <CardTitle>{title}</CardTitle>
-    <CardText>{text}</CardText>
-    <Button>Go somewhere</Button>
+    {title ? <CardTitle>{title}</CardTitle> : ""}
+    {text ? <CardText>{text}</CardText> : ""}
+    {children ? children : <Button>Go somewhere</Button>}
   </Card>
 );
 
