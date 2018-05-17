@@ -5,10 +5,6 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-  Card,
-  Button,
-  CardTitle,
-  CardText,
   Row,
   Col
 } from "reactstrap";

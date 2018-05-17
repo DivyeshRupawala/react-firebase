@@ -1,16 +1,9 @@
 import React from "react";
 import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
   Card,
   Button,
   CardTitle,
-  CardText,
-  Row,
-  Col
+  CardText
 } from "reactstrap";
 
 const CardWithTitle = ({ title, text, children }) => (

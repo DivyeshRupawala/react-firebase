@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.0",
+    "express": "^4.16.3",
     "react": "^16.3.2",
     "react-cookie": "^2.1.4",
     "react-dom": "^16.3.2",
@@ -14,8 +15,7 @@
     "reactstrap": "^5.0.0-beta.3",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
-    "universal-cookie": "^2.1.2",
-    "express": "^4.14.0"
+    "universal-cookie": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,6 +24,5 @@
     "eject": "react-scripts eject"
   },
   "keywords": [],
-  "description":
-    "This project include react, react-router 4,  redux, redux-saga, Provider, CookiesProvider,  fire-base. "
+  "description": "This project include react, react-router 4,  redux, redux-saga, Provider, CookiesProvider,  fire-base. "
 }
