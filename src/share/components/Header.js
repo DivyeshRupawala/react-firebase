@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 
 import { withCookies } from "react-cookie";
 import { logout } from "../../login/login-actions";
+import { Badge } from 'reactstrap';
 
 class Header extends React.Component {
   constructor(props) {
@@ -26,10 +27,12 @@ class Header extends React.Component {
     const loggedContainer = (
       <div>
         <a>Welcome {user.firstName} </a>
+        <Link to="products">Products</Link>
         <Link to="home">Home</Link>
         <a href="" onClick={this.onLogout}>
           Logout
         </a>
+        <a href="">Cart <Badge color="secondary">0</Badge></a>
       </div>
     );
     return loggedContainer;

@@ -10,6 +10,7 @@ import LogIn from "./login/LogIn";
 import SignUp from "./sign-up/SignUp";
 
 import Home from "./home/Home";
+import Products from './products'
 
 import CustomAlert from "./share/components/custom-alert/CustomAlert";
 
@@ -33,6 +34,8 @@ const RouterHandler = ({ isUserLoggedIn, cookies }) => {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/home" component={Home} />
+              <Route path="/products" component={Products} />
+              
               <Redirect from="/logIn" exact to="/" />
             </Switch>
           ) : (
