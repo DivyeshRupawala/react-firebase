@@ -13,6 +13,31 @@ import range from 'lodash/range';
 import Rating from 'react-rating'
 import Loading from "../share/components/LoadingImage";
 
+
+		// const imgList = [
+		// 	"https://rukminim1.flixcart.com/image/400/400/jh3q6q80/shoe/9/v/f/gp-162-9-sparx-black-01-original-imaf5fd6az58vhft.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/j5mrxjk0/shoe/6/s/y/vertigo-8-lotto-10-original-imaewa2sjfnjh6up.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jfzpuvk0/shoe/3/g/7/ax-001-8-adza-navyblue-grey-original-imaf4c5kacgc2yzh.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/shoe/c/r/h/blue-dps01-gs-10-original-imae4zqgvqmyaxmb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jezzukw0/shoe/f/x/s/wndr-13-11-asian-white-blue-original-imaeprfg8g64ajzb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/400/400/jh3q6q80/shoe/9/v/f/gp-162-9-sparx-black-01-original-imaf5fd6az58vhft.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/j5mrxjk0/shoe/6/s/y/vertigo-8-lotto-10-original-imaewa2sjfnjh6up.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jfzpuvk0/shoe/3/g/7/ax-001-8-adza-navyblue-grey-original-imaf4c5kacgc2yzh.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/shoe/c/r/h/blue-dps01-gs-10-original-imae4zqgvqmyaxmb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jezzukw0/shoe/f/x/s/wndr-13-11-asian-white-blue-original-imaeprfg8g64ajzb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/400/400/jh3q6q80/shoe/9/v/f/gp-162-9-sparx-black-01-original-imaf5fd6az58vhft.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/j5mrxjk0/shoe/6/s/y/vertigo-8-lotto-10-original-imaewa2sjfnjh6up.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jfzpuvk0/shoe/3/g/7/ax-001-8-adza-navyblue-grey-original-imaf4c5kacgc2yzh.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/shoe/c/r/h/blue-dps01-gs-10-original-imae4zqgvqmyaxmb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jezzukw0/shoe/f/x/s/wndr-13-11-asian-white-blue-original-imaeprfg8g64ajzb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/400/400/jh3q6q80/shoe/9/v/f/gp-162-9-sparx-black-01-original-imaf5fd6az58vhft.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/j5mrxjk0/shoe/6/s/y/vertigo-8-lotto-10-original-imaewa2sjfnjh6up.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jfzpuvk0/shoe/3/g/7/ax-001-8-adza-navyblue-grey-original-imaf4c5kacgc2yzh.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/shoe/c/r/h/blue-dps01-gs-10-original-imae4zqgvqmyaxmb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/312/312/jezzukw0/shoe/f/x/s/wndr-13-11-asian-white-blue-original-imaeprfg8g64ajzb.jpeg?q=70",
+		// 	"https://rukminim1.flixcart.com/image/400/400/jh3q6q80/shoe/9/v/f/gp-162-9-sparx-black-01-original-imaf5fd6az58vhft.jpeg?q=70"
+		// ];
+
 class CustomCarouselList extends React.Component {
 	constructor(props) {
 	    super(props);
